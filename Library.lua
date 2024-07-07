@@ -2988,7 +2988,7 @@ function Library:CreateWindow(...)
     });
 
 local WindowLabel = Library:CreateLabel({
-    Position = UDim2.new(0.5, 0, 0, 0),  -- Adjust the horizontal position (0.5 centers horizontally)
+    Position = UDim2.new(0.5, 50, 0, 0),  -- Adjust the horizontal position (0.5 centers horizontally, 50 moves it to the right)
     Size = UDim2.new(0, 0, 0, 25),
     Text = Config.Title or '',
     TextXAlignment = Enum.TextXAlignment.Center,  -- Center text horizontally
@@ -2996,11 +2996,6 @@ local WindowLabel = Library:CreateLabel({
     ZIndex = 1,
     Parent = Inner,
 });
-
--- Adjusting the position to move more to the right
-WindowLabel.Position = UDim2.new(0.5, 50, 0, 0)  -- Example: Moves 50 pixels to the right
-
-
 
     local MainSectionOuter = Library:Create('Frame', {
         BackgroundColor3 = Library.BackgroundColor;
